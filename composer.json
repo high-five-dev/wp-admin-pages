@@ -1,0 +1,29 @@
+{
+    "name": "high-five/wp-admin-pages",
+    "version": "0.0.1",
+    "description": "Add WordPress admin pages.",
+    "type": "project",
+    "minimum-stability": "dev",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "High Five",
+            "email": "hello@high-five.dev",
+            "homepage": "https://www.high-five.dev"
+        },
+        {
+            "name": "Harm Putman",
+            "email": "harm@high-five.dev",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "webmaster@foursites.nl"
+    },
+    "require": {
+        "php": ">=7.2"
+    },
+    "autoload": {
+        "psr-4": {"HighFive\\WPAdminPages\\": "src/"}
+    }
+}

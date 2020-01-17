@@ -1,0 +1,19 @@
+{
+    "name": "highfive-wp-admin-pages",
+    "version": "0.0.1",
+    "description": "Add WordPress admin pages.",
+    "repository": "github:high-five-dev/wp-admin-pages",
+    "private": true,
+    "author": {
+        "name": "High Five",
+        "email": "hello@high-five.dev",
+        "url": "https://www.high-five.dev"
+    },
+    "contributors": [
+        {
+            "name": "Harm Putman",
+            "email": "harm@high-five.dev"
+        }
+    ],
+    "license": "GPL-3.0-or-later"
+}
