@@ -6,7 +6,7 @@
  * @copyright:  2020 - High Five
  *
  * Created:     2020-01-17, 02:46:00 pm
- * Modified:    2020-01-17, 03:15:04 pm
+ * Modified:    2020-01-17, 04:17:43 pm
  * Modified By: Harm Putman <harm@high-five.dev>
  */
 
@@ -16,33 +16,24 @@ defined('ABSPATH') or die('These are not the droids you are looking for...');
 
 class Init
 {
-    protected $services = [];
-
-    public function __construct()
-    {
-        $this->setServices();
-
-        return $this;
-    }
-
-    protected function setServices()
+    public static function getServices()
     {
         $this->services = [
             Page::class
         ];
     }
 
-    public function registerServices()
+    public static function registerServices()
     {
-        foreach ($this->services as $class) {
-            $instance = $this->instantiate( $class );
+        foreach (self::getServices() as $class) {
+            $instance = self::instantiate( $class );
             if (method_exists($instance, 'register')) {
                 $instance->register();
             }
         }
     }
 
-    private function instantiate($class)
+    public static function instantiate($class)
     {
         $instance = new $class();
 
